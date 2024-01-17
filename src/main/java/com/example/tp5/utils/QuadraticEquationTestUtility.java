@@ -162,7 +162,7 @@ public final class QuadraticEquationTestUtility {
                 + "              writeResultToCSV(\"(\"+a+\")\"+\"x^2 + \"+\"(\"+b+\")\"+\"x + \"+\"(\"+c+\")\"+\" "
                 + "= 0\", \"\" + solutions[0], \"\"+solutions[1], \"\"+expected, true);\n"
                 + "          } else {\n"
-                + "              System.out.println(\"Pas de solution réelle.\");\n"
+                + "              System.out.println(\"Pas de solution reelle.\");\n"
                 + "              // Use assert for the case with no solution\n"
                 + "              assertEquals(0, solutions.length);\n"
                 + "              writeResultToCSV(\"(\"+a+\")\"+\"x^2 + \"+\"(\"+b+\")\"+\"x + \"+\"(\"+c+\")\"+\" "
