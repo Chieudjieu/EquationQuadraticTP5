@@ -28,7 +28,7 @@ public final class QuadraticEquationTestUtility {
         final String testCaseFile,
         final String filePath,
         final String testPrefixMethod) {
-        String fileHeader = "package com.example;\n"
+        String fileHeader = "package com.example.tp5;\n"
         + "import static org.junit.Assert.assertEquals;\n"
         + "import org.junit.Test;\n"
         + "import java.io.FileWriter;\n"
@@ -122,7 +122,7 @@ public final class QuadraticEquationTestUtility {
                 + "        double a = %s;\n"
                 + "        double b = %s;\n"
                 + "        double c = %s;\n\n"
-                + "        Class<?> dynamicClass = Class.forName(\"com.example.equation.QuadraticEquationSolver\");\n"
+                + "        Class<?> dynamicClass = Class.forName(\"com.example.tp5.equation.QuadraticEquationSolver\");\n"
                 + "        Object dynamicObject = dynamicClass.getDeclaredConstructor().newInstance();\n"
                 + "        try {\n"
                 + "          writeResultToCSV(\"(\"+a+\")\"+\"x^2 + \"+\"(\"+b+\")\"+\"x + \"+\"(\"+c+\")\"+\" "
@@ -142,7 +142,7 @@ public final class QuadraticEquationTestUtility {
                 + "        double a = %s;\n"
                 + "        double b = %s;\n"
                 + "        double c = %s;\n\n"
-                + "        Class<?> dynamicClass = Class.forName(\"com.example.equation.QuadraticEquationSolver\");\n"
+                + "        Class<?> dynamicClass = Class.forName(\"com.example.tp5.equation.QuadraticEquationSolver\");\n"
                 + "        Object dynamicObject = dynamicClass.getDeclaredConstructor().newInstance();\n"
                 + "        try {\n"
                 + "          double[] solutions = (double[]) dynamicClass.getMethod(\"solve\", double.class, "
