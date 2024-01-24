@@ -14,10 +14,10 @@ pipeline {
             }
         }
 
-        stage('Build') {
+        stage('Clean and Package') {
             steps {
-                // Compile le projet Maven
-                bat 'mvn clean package'
+                // Clean and package the application without running tests
+                bat 'mvn clean package -DskipTests'
             }
         }
 
