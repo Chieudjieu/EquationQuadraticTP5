@@ -28,10 +28,21 @@ pipeline {
             }
         }
 
-        stage('launch spring boot') {
+        stage('Start Spring Boot') {
             steps {
-                // Exécute les tests Cucumber
-                bat 'mvn test-compile exec:java -Dexec.mainClass="com.example.tp5.Tp5Application"'
+                // Start Spring Boot application in the background
+                script {
+                    bat 'start /b mvn spring-boot:run -Dspring-boot.run.arguments="--server.port=8081"'
+                }
+            }
+        }
+
+        stage('Wait for Application to Start') {
+            steps {
+                // Wait for a few seconds to ensure the application has started
+                script {
+                    sleep(30) // Adjust the time as needed
+                }
             }
         }
 
