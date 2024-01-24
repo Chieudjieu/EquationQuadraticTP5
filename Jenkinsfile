@@ -3,7 +3,7 @@ pipeline {
 
     tools {
         // Assurez-vous que Maven est disponible
-        maven '3.9.5' 
+        maven 'Maven 3.9.5' 
     }
 
     stages {
