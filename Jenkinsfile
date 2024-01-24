@@ -14,12 +14,12 @@ pipeline {
             }
         }
 
-        stage('Build') {
-            steps {
-                // Compile le projet Maven
-                bat 'mvn clean package'
-            }
-        }
+        // stage('Build') {
+        //     steps {
+        //         // Compile le projet Maven
+        //         bat 'mvn clean package'
+        //     }
+        // }
 
         // stage('Run Specific Unit Test') {
         //     steps {
