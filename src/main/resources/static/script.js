@@ -36,7 +36,7 @@ function calculer() {
     })
     .catch(error => {
         error.json().then(errorMessage => {
-            document.getElementById('resultat').innerText = `Please : ${errorMessage.error}`;
+            document.getElementById('resultat').innerText = `${errorMessage.error}`;
         }).catch(() => {
             document.getElementById('resultat').innerText = "Erreur lors du calcul.";
         });

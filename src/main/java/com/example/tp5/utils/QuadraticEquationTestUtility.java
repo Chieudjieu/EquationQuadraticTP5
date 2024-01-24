@@ -66,11 +66,11 @@ public final class QuadraticEquationTestUtility {
                 final int indexOfB = 2;
                 final int indexOfC = 3;
 
-                System.out.println("String " + values[1]);
+                //System.out.println("String " + values[1]);
                 Map<String, Double> a = equivalentClassesRandomValue(values[indexOfA]);
                 Map<String, Double> b = equivalentClassesRandomValue(values[indexOfB]);
                 Map<String, Double> c = equivalentClassesRandomValue(values[indexOfC]);
-                System.out.println("a " + a + " b " + b + " c " + c);
+                //System.out.println("a " + a + " b " + b + " c " + c);
 
 
                 String testName = testPrefixMethod;
@@ -90,7 +90,7 @@ public final class QuadraticEquationTestUtility {
 
 
                 fileContent += generateTestCode(testName + aKey + bKey + cKey, a.get(aKey), b.get(bKey), c.get(cKey));
-                System.out.println("fileContent " + fileContent);
+                //System.out.println("fileContent " + fileContent);
 
             }
         } catch (IOException e) {
@@ -200,7 +200,7 @@ public final class QuadraticEquationTestUtility {
             label = "C";
         }
 
-        System.out.println("letter" + letter);
+        //System.out.println("letter" + letter);
 
         switch (letter) {
             case 'a':
