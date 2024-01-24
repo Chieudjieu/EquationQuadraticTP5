@@ -14,34 +14,34 @@ pipeline {
             }
         }
 
-        // stage('Build') {
-        //     steps {
-        //         // Compile le projet Maven
-        //         bat 'mvn clean package'
-        //     }
-        // }
+        stage('Build') {
+            steps {
+                // Compile le projet Maven
+                bat 'mvn clean package'
+            }
+        }
 
-        // stage('Run Specific Unit Test') {
-        //     steps {
-        //         // Run only QuadraticEquationSolverTest from the com.example.tp5 package
-        //         bat 'mvn test -Dtest=com.example.tp5.QuadraticEquationSolverTest'
-        //     }
-        // }
+        stage('Run Specific Unit Test') {
+            steps {
+                // Run only QuadraticEquationSolverTest from the com.example.tp5 package
+                bat 'mvn test -Dtest=com.example.tp5.QuadraticEquationSolverTest'
+            }
+        }
 
-        // stage('Run Cucumber Tests') {
-        //     steps {
-        //         // Exécute les tests Cucumber
-        //         bat 'mvn test-compile exec:java -Dexec.mainClass="com.example.tp5.testrunners.TestRunner"'
-        //     }
-        // }
+        stage('Run Cucumber Tests') {
+            steps {
+                // Exécute les tests Cucumber
+                bat 'mvn test-compile exec:java -Dexec.mainClass="com.example.tp5.testrunners.TestRunner"'
+            }
+        }
 
-        // stage('Déploiement') {
-        //     steps {
-        //         // Script de déploiement
-        //         echo 'Déploiement du projet'
-        //         // Ici, ajoutez votre script de déploiement
-        //     }
-        // }
+        stage('Déploiement') {
+            steps {
+                // Script de déploiement
+                echo 'Déploiement du projet'
+                // Ici, ajoutez votre script de déploiement
+            }
+        }
     }
     
     post {
