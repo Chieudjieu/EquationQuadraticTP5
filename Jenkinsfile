@@ -49,7 +49,7 @@ pipeline {
         stage('Run Cucumber Tests') {
             steps {
                 // Exécute les tests Cucumber
-                bat 'mvn test-compile exec:java -Dexec.mainClass="com.example.tp5.testrunners.TestRunner"'
+                bat 'mvn test'
             }
         }
 
