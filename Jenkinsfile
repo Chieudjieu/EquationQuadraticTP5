@@ -10,14 +10,14 @@ pipeline {
         stage('Build') {
             steps {
                 // Compile le projet Maven
-                sh 'mvn clean package'
+                bat 'mvn clean package'
             }
         }
 
         stage('Test Unitaires') {
             steps {
                 // Exécute les tests unitaires
-                sh 'mvn test'
+                bat 'mvn test'
             }
         }
 
