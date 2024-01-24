@@ -3,10 +3,17 @@ pipeline {
 
     tools {
         // Assurez-vous que Maven est disponible
-        maven 'Maven 3.9.5' 
+        maven 'Maven 3.9.5'
     }
 
     stages {
+        stage('Generate Tests') {
+            steps {
+                // Execute the class that generates test functions
+                bat 'mvn exec:java -Dexec.mainClass="com.example.tp5.utils.TestCodeGenerator"'
+            }
+        }
+
         stage('Build') {
             steps {
                 // Compile le projet Maven
@@ -14,10 +21,17 @@ pipeline {
             }
         }
 
-        stage('Test Unitaires') {
+        stage('Run Specific Unit Test') {
             steps {
-                // Exécute les tests unitaires
-                bat 'mvn test'
+                // Run only QuadraticEquationSolverTest from the com.example.tp5 package
+                bat 'mvn test -Dtest=com.example.tp5.QuadraticEquationSolverTest'
+            }
+        }
+
+        stage('Run Cucumber Tests') {
+            steps {
+                // Exécute les tests Cucumber
+                bat 'mvn test-compile exec:java -Dexec.mainClass="com.example.tp5.testrunners.TestRunner"'
             }
         }
 
