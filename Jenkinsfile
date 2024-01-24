@@ -28,6 +28,13 @@ pipeline {
             }
         }
 
+        stage('launch spring boot') {
+            steps {
+                // Exécute les tests Cucumber
+                bat 'mvn test-compile exec:java -Dexec.mainClass="com.example.tp5.Tp5Application"'
+            }
+        }
+
         stage('Run Cucumber Tests') {
             steps {
                 // Exécute les tests Cucumber
