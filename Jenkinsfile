@@ -61,7 +61,7 @@ pipeline {
                     def tomcatUser = 'wilfried'
                     def tomcatPassword = 'd21E/0?=52ejhS'
                     def warFile = 'target/tp5-0.0.1-SNAPSHOT.jar' // Ajustez en fonction de votre projet
-                    def contextPath = '/quadratic_equation_solver' // Ajustez en fonction de votre préférence
+                    def contextPath = '/quadratic-equation-solver' // Ajustez en fonction de votre préférence
 
 
                     // Commande pour déployer sur Tomcat
