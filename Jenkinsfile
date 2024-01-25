@@ -56,13 +56,11 @@ pipeline {
         stage('Deploy to Tomcat') {
             steps {
                 script {
-                    // Remplacez les valeurs ci-dessous par vos propres configurations
                     def tomcatUrl = 'http://localhost:8082'
-                    def tomcatUser = 'wilfried'
-                    def tomcatPassword = 'd21E/0?=52ejhS'
-                    def warFile = 'target/tp5-0.0.1-SNAPSHOT.jar' // Ajustez en fonction de votre projet
-                    def contextPath = '/quadratic-equation-solver' // Ajustez en fonction de votre préférence
-
+                    def tomcatUser = 'wilfried' // Utilisez les secrets Jenkins
+                    def tomcatPassword = 'd21E/0?=52ejhS' // Utilisez les secrets Jenkins
+                    def warFile = 'target/tp5-0.0.1-SNAPSHOT.war' // Assurez-vous que ce chemin est correct
+                    def contextPath = '/quadratic-equation-solver'
 
                     // Commande pour déployer sur Tomcat
                     bat "curl -u ${tomcatUser}:${tomcatPassword} -T ${warFile} \"${tomcatUrl}/manager/text/deploy?path=${contextPath}&update=true\""
