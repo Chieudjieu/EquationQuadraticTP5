@@ -9,6 +9,7 @@ pipeline {
     stages {
         stage('Generate Tests') {
             steps {
+                
                 // Execute the class that generates test functions
                 bat 'mvn exec:java -Dexec.mainClass="com.example.tp5.utils.TestCodeGenerator"'
             }
