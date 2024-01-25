@@ -11,8 +11,6 @@
 	<groupId>com.example</groupId>
 	<artifactId>tp5</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
-
 	<name>tp5</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
@@ -107,35 +105,6 @@
 				<!-- Configuration spécifique, si nécessaire -->
 				</configuration>
 			</plugin>
-
-			<!-- Plugin pour le JAR -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jar-plugin</artifactId>
-                <version>3.2.0</version>
-                <executions>
-                    <execution>
-                        <id>make-a-jar</id>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>jar</goal>
-                        </goals>
-                        <configuration>
-                            <classifier></classifier> <!-- Pas de classificateur pour le JAR -->
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-
-            <!-- Plugin pour le WAR -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-war-plugin</artifactId>
-                <version>3.2.3</version>
-                <configuration>
-                    <classifier>2</classifier> <!-- Classificateur '2' pour le WAR -->
-                </configuration>
-            </plugin>
 		</plugins>
 	</build>
 
