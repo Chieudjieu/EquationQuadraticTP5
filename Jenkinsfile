@@ -65,12 +65,12 @@ pipeline {
 
 
                     // Commande pour déployer sur Tomcat
-                    sh "curl -u ${tomcatUser}:${tomcatPassword} -T ${warFile} \"${tomcatUrl}/manager/text/deploy?path=${contextPath}&update=true\""
+                    bat "curl -u ${tomcatUser}:${tomcatPassword} -T ${warFile} \"${tomcatUrl}/manager/text/deploy?path=${contextPath}&update=true\""
                 }
             }
         }
     }
-    
+
     post {
         always {
             // Actions à réaliser après les étapes, comme le nettoyage
