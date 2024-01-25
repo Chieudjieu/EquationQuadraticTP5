@@ -21,7 +21,7 @@ pipeline {
             }
         }
 
-        stage('Run Specific Unit Test') {
+        stage('Run QuadraticEquationSolverTest Unit Test') {
             steps {
                 // Run only QuadraticEquationSolverTest from the com.example.tp5 package
                 bat 'mvn test -Dtest=com.example.tp5.QuadraticEquationSolverTest'
@@ -53,11 +53,20 @@ pipeline {
             }
         }
 
-        stage('Déploiement') {
+        stage('Deploy to Tomcat') {
             steps {
-                // Script de déploiement
-                echo 'Déploiement du projet'
-                // Ici, ajoutez votre script de déploiement
+                script {
+                    // Remplacez les valeurs ci-dessous par vos propres configurations
+                    def tomcatUrl = 'http://localhost:8082'
+                    def tomcatUser = 'wilfried'
+                    def tomcatPassword = 'd21E/0?=52ejhS'
+                    def warFile = 'target/tp5-0.0.1-SNAPSHOT.jar' // Ajustez en fonction de votre projet
+                    def contextPath = '/quadratic_equation_solver' // Ajustez en fonction de votre préférence
+
+
+                    // Commande pour déployer sur Tomcat
+                    sh "curl -u ${tomcatUser}:${tomcatPassword} -T ${warFile} \"${tomcatUrl}/manager/text/deploy?path=${contextPath}&update=true\""
+                }
             }
         }
     }
