@@ -59,7 +59,7 @@ pipeline {
                     def tomcatUrl = 'http://localhost:8082'
                     def tomcatUser = 'wilfried' // Utilisez les secrets Jenkins
                     def tomcatPassword = 'd21E/0?=52ejhS' // Utilisez les secrets Jenkins
-                    def warFile = 'target/tp5-0.0.1-SNAPSHOT.war' // Assurez-vous que ce chemin est correct
+                    def warFile = 'target/tp5-0.0.1-SNAPSHOT.jar' // Assurez-vous que ce chemin est correct
                     def contextPath = '/quadratic-equation-solver'
 
                     // Commande pour déployer sur Tomcat
